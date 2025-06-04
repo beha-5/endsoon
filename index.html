@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>End Soon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="intro" id="intro">
+    <h1 class="title">🌍 Welcome to <span class="highlight">End Soon</span></h1>
+    <p class="subtitle">A beautiful multi-function clock app</p>
+    <button id="enterBtn">Enter</button>
+    <button id="btn"></button>
+  </section>
+
+  <div class="container" id="mainContent">
+    <div id="timeQuotes" class="tab-content" style="display:none;">
+  <p id="quoteText">⏳ Time is precious...</p>
+</div>
+    <div class="tabs">
+      <button class="tab" onclick="showTab('timer')">Timer</button>
+      <button class="tab" onclick="showTab('alarm')">Alarm</button>
+      <button class="tab" onclick="showTab('worldClock')">World Time</button>
+      <button class="tab" onclick="showTab('weather')">Weather</button>
+    </div>
+
+    <div id="timer" class="tab-content">
+      <h2>Countdown Timer</h2>
+      <div class="timer"><span id="countdown">00:00:00</span></div>
+      <input id="timeInput" type="number" placeholder="Enter seconds" min="1" />
+      <button id="startBtn">Start</button>
+    </div>
+
+    <div id="alarm" class="tab-content">
+        <h2>Set Alarm</h2>
+        <input id="alarmTime" type="time" />
+        <button id="setAlarmBtn">Set Alarm</button>
+        <p id="alarmMessage"></p>
+    </div>
+    
+    <div id="worldClock" class="tab-content">
+      <h2>World Clock</h2>
+      <select id="citySelect">
+        <option value="Asia/Dushanbe">Dushanbe</option>
+        <option value="Europe/Moscow">Moscow</option>
+        <option value="Europe/London">London</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="America/New_York">New York</option>
+        <option value="Australia/Sydney">Sydney</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="Asia/Seoul">Seoul</option>
+        <option value="Europe/Berlin">Berlin</option>
+        <option value="Africa/Nairobi">Nairobi</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+        <option value="Asia/Dubai">Dubai</option>
+        <option value="Asia/Kolkata">New Delhi</option>
+        <option value="Asia/Shanghai">Shanghai</option>
+        <option value="America/Sao_Paulo">São Paulo</option>
+        <option value="Africa/Cairo">Cairo</option>
+      </select>      <p id="worldTime"></p>
+    </div>
+
+    <div id="weather" class="tab-content">
+      <h2>Weather</h2>
+      <input id="cityInput" type="text" placeholder="Enter city" />
+      <button id="getWeatherBtn">Get Weather</button>
+      <p id="weatherInfo"></p>
+    </div>
+
+    <button class="back-to-top" onclick="goBack()">⬆ Back to Welcome</button>
+  </div>
+
+  <section class="final-section">
+    <h2>🌠 Time Flies, Make It Count!</h2>
+    <p>Explore. Set goals. End Soon… but wisely.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
